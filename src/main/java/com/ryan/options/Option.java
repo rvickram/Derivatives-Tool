@@ -1,4 +1,4 @@
-package options;
+package com.ryan.options;
 
 public interface Option {
 
@@ -6,5 +6,5 @@ public interface Option {
 
     int calculatePrice(int currentPrice);
 
-    int getOptionType();
+    String getOptionType();
 }
