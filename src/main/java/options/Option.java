@@ -1,18 +1,10 @@
 package options;
 
-abstract public class Option {
+public interface Option {
 
-    private int premium;
-    private int strikePrice;
+    int calculatePayoff(int currentPrice);
 
-    public Option(int premium, int strikePrice) {
-        this.premium = premium;
-        this.strikePrice = strikePrice;
-    }
+    int calculatePrice(int currentPrice);
 
-    abstract int calculatePayoff(int currentPrice);
-
-    abstract int calculateProfit(int currentPrice);
-
-    abstract String getOptionType();
+    int getOptionType();
 }
